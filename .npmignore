@@ -6,3 +6,4 @@ config
 src
 webpack.config.js
 example
+Makefile
