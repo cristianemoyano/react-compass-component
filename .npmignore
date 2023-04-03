@@ -4,3 +4,4 @@
 .gitignore
 config
 src
+webpack.config.js

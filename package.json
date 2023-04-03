@@ -1,6 +1,6 @@
 {
   "name": "react-compass-component",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A fully functional Compass component for React",
   "main": "src/index.jsx",
   "scripts": {
@@ -51,6 +51,7 @@
     "mini-css-extract-plugin": "^2.7.3",
     "prettier": "^2.8.7",
     "proptypes": "^1.1.0",
+    
     "react-style-normalizer": "^1.2.8",
     "style-loader": "^3.3.2",
     "webpack": "^5.77.0",
