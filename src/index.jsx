@@ -1,4 +1,6 @@
 /**
+ * This code has refactored from the following code:
+ * 
  * ReactCompass - a carefully crafted Compass component for React.
  * https://github.com/virtyaluk/react-compass
  *
