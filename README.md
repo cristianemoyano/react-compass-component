@@ -13,7 +13,7 @@
 
 The package can be installed via:
 
-- NPM: `npm install react-compass --save`
+- NPM: `npm install react-compass-component --save`
 
 
 ```js
