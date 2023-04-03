@@ -1,3 +1,15 @@
+/**
+ * ReactCompass - a carefully crafted Compass component for React.
+ * https://github.com/virtyaluk/react-compass
+ *
+ * Copyright (c) 2016 Bohdan Shtepan
+ * http://modern-dev.com/
+ *
+ * Licensed under the MIT license.
+ *
+ * @flow
+ */
+
 import React from 'react'
 
 import './style.css';
