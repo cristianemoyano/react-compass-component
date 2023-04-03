@@ -5,3 +5,4 @@
 config
 src
 webpack.config.js
+example
