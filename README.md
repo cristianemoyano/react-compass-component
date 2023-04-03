@@ -2,7 +2,8 @@
 
 [![npm version](https://badge.fury.io/js/react-compass-component.svg)](https://badge.fury.io/js/react-compass-component) 
 
-> A fully functional Compass component for React
+> A fully functional Compass component for React. Based on [react-compass](https://www.npmjs.com/package/react-compass) and refactored
+to support latest React features and created to be 'plug and play', no extra code needed.
 
 <p align="center">
   <img src="example/preview.png" alt="Compass component preview" />
