@@ -1,8 +1,4 @@
-# 🚀 react-compass-component
-
-
-
-# React Compass v0.1.0
+# react-compass-component
 
 [![npm version](https://badge.fury.io/js/react-compass-component.svg)](https://badge.fury.io/js/react-compass-component) 
 
