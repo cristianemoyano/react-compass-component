@@ -10,13 +10,28 @@
  * @flow
  */
 
-import React from 'react'
+
+import { useEffect, useState } from 'react';
 
 import './style.css';
 
 import styleNormalizer from 'react-style-normalizer';
 
-export default ({ direction = 0, directionNames=['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'] }) => {
+export default function Compass({ directionNames=['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'] }) {
+
+  const [compass, setCompass] = useState(0);
+
+  useEffect(() => {
+    start()
+  }, []);
+
+  const start = async () => {
+    window.addEventListener("deviceorientationabsolute", onOrientationEventAbsolute, true);
+    function onOrientationEventAbsolute(event) {
+      const compass = Math.abs(event.alpha - 360);
+      setCompass(compass)
+    }
+  }
 
   const directionName = (dir) => {
       let sections = directionNames.length,
@@ -28,10 +43,14 @@ export default ({ direction = 0, directionNames=['N', 'NE', 'E', 'SE', 'S', 'SW'
       return directionNames[x];
   }
 
+  const formatCompass = (direction) => {
+    return Number(Number(direction).toFixed(0))
+  }
+
   return (
     <div className="center compass" >
       <div className="compass__windrose"
-        style={styleNormalizer({ transform: `rotate(-${direction}deg)` })}>
+        style={styleNormalizer({ transform: `rotate(-${compass}deg)` })}>
         {[...Array(10)].map((k, i) => <div className="compass__mark" key={i + 1}></div>)}
         <div className="compass__mark--direction-h"></div>
         <div className="compass__mark--direction-v"></div>
@@ -44,10 +63,9 @@ export default ({ direction = 0, directionNames=['N', 'NE', 'E', 'SE', 'S', 'SW'
         </div>
       </div>
       <div className="degrees">
-        <span>{direction}<sup>o</sup></span> <span>{directionName(direction)}</span>
+        <span>{formatCompass(compass)}<sup>o</sup></span> <span>{directionName(formatCompass(compass))}</span>
       </div>
 
     </div>
   )
 }
-

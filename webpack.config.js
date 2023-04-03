@@ -41,6 +41,7 @@ const config = {
     extensions: ['.js', '.jsx', '.css'],
     alias: {
       react: path.resolve(__dirname, './node_modules/react'),
+      'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
       'prop-types': path.resolve(
         __dirname, 
         './node_modules/prop-types'
@@ -57,6 +58,10 @@ const config = {
       commonjs2: 'react',
       amd: 'React',
       root: 'React',
+    },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
     },
     'prop-types': {
        commonjs: 'prop-types',
