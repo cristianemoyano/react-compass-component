@@ -23,7 +23,7 @@ import styleNormalizer from 'react-style-normalizer';
 
 
 interface ContainerProps {
-    directionNames: string[]
+    directionNames?: string[]
 }
 
 
